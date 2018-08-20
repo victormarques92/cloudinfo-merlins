@@ -1,0 +1,120 @@
+@import '../../scss/_deps';
+
+.header-nav {
+    @extend .row;
+    @extend .halign-between;
+    @extend .valign-middle;
+    @extend .pad-both-15;
+
+    .box-search {
+        @extend .row;
+        @extend .valign-middle;
+        @extend .pad-both-10;
+        @extend .pad-sides-15;
+        border: 1px solid map-get($colors, 'black');
+        border-radius: 5px;
+        min-width: 280px;
+
+        .btn-search {
+            @extend .mg-right-15;
+        }
+
+        .input-search {
+            &::-webkit-input-placeholder {
+                color: darken(map-get($colors, 'gray-light'), 20%);
+            }
+        }
+    }
+
+    .information {
+        @extend .cl-danger;
+
+        .title-information {
+            font-family: 'Merriweather', serif;
+            font-weight: 100;
+            font-style: italic;
+            font-size: 20px;
+        }
+    }
+
+    .shop {
+        @extend .row;
+        @extend .valign-middle;
+
+        .img-shop {
+            @extend .mg-right-15;
+        }
+
+        .bag {
+            text-transform: uppercase;
+            color: darken(map-get($colors, 'gray-light'), 20%);
+
+            .qtd-bag {
+                @extend .cl-danger;
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.navbar {
+    @extend .bg-primary;
+    @extend .pad-both-10;
+
+    .container {
+        @extend .row;
+        @extend .valign-middle;
+        @extend .halign-between;
+    }
+
+    .list-menu {
+        @extend .row;
+
+        .item-list {
+            @extend .cl-white;
+            @extend .pad-sides-15;
+            @extend .pad-both-10;
+            display: block;
+            font-style: italic;
+            font-weight: 100;
+            font-family: 'Merriweather', serif;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                @extend .cl-white;
+            }
+        }
+
+        .clearance {
+            background: darken(map-get($colors, 'primary'), 10%);
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 100;
+        }
+    }
+
+    .list-sign {
+        @extend .row;
+        @extend .valign-middle;
+        color: lighten(map-get($colors, 'primary'), 25%);
+
+        .item-list {
+            @extend .cl-white;
+            @extend .pad-sides-15;
+            @extend .pad-both-10;
+            display: block;
+            font-style: italic;
+            font-weight: 100;
+            font-family: 'Merriweather',
+            serif;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+                @extend .cl-white;
+            }
+        }
+    }
+}
