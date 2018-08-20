@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700'); // Font Oswald
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i'); // Font Merriweather
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i'); // Font Lato
 
 // PADRÃO DE ELEMENTOS DO PROJETO
@@ -8,15 +8,19 @@
     margin: 0;
     padding: 0;
     outline: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
 }
 
 html,
 body {
-    font-family: 'Oswald', sans-serif;
     min-height: 100vh;
 }
 
-ul { list-style: none }
+ul {
+    list-style: none;
+    margin: 0
+}
 
 a { text-decoration: none }
 
