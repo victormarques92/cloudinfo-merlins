@@ -1,0 +1,19 @@
+//===============================================
+//                                Paleta de Cores
+//===============================================
+/*
+    Exemplo de chamadas:
+
+    background-color: map-get($colors, 'nome-da-cor');
+    @extend %bg-nome-da-cor
+    @extend %cl-nome-da-cor
+
+*/
+
+$colors: (
+    'primary': #523467,
+    'danger': #d6391e,
+    'white': #fff,
+    'black': #000,
+    'gray-light': #e5e5e5
+);
