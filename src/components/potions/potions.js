@@ -44,9 +44,10 @@ $(document).ready(function () {
 
     var bag = 0;
 
-    $('.btn-cart').click(function() {
+    $('.btn-cart').click(function(e) {
+        e.preventDefault();
+
         bag++;
         $('.qtd-bag').html(bag);
-
     });
 });
