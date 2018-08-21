@@ -27,9 +27,10 @@
                 "./node_modules/jquery/dist/jquery.min.js"
             ],
             "files": [
-                "./src/js/*.js",
-                "./src/js/**/*.js",
                 "./src/components/**/*.js"
+            ],
+            "plugins": [
+                "./src/js/plugins/*"
             ]
         },
 		"img": "./src/img/**/*",
@@ -39,6 +40,7 @@
 		"views": "./dist",
 		"css": "./dist/css",
 		"js": "./dist/js",
+		"plugins": "./dist/js/plugins",
 		"img": "./dist/img",
     	"fonts": "./dist/fonts"
 	}
