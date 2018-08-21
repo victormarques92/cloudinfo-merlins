@@ -5,6 +5,11 @@
         padding-left: 0;
         padding-right: 0;
 
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
         .hidden {
             display: block;
         }
@@ -88,12 +93,18 @@
         padding: 0;
         position: absolute;
         top: 98px;
-        left: -100%;
+        left: -160%;
         transition: .25s;
+
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
 
         .list-menu {
             display: flex;
             flex-direction: column;
+            width: 100%;
 
             .dropdown {
                 padding: 5px 20px;
@@ -104,6 +115,13 @@
                     border: 0;
                 }
 
+                &-menu {
+                    display: none;
+                }
+
+                &-toggle::after {
+                    opacity: 0;
+                }
             }
 
             .clearance {
@@ -118,7 +136,7 @@
         .list-sign {
             padding: 20px;
             display: flex;
-            justify-content: center;
+            margin: 0 auto;
         }
 
         &.active {

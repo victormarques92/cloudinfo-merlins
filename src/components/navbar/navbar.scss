@@ -1,12 +1,13 @@
 @import '../../scss/_deps';
 
 .header-nav {
-    @extend .container;
-    @extend .row;
-    @extend .halign-between;
-    @extend .valign-middle;
-    @extend .pad-top-30;
-    @extend .pad-bottom-40;
+    .container {
+        @extend .row;
+        @extend .halign-between;
+        @extend .valign-middle;
+        @extend .pad-top-30;
+        @extend .pad-bottom-40;
+    }
 
     .menu-mobile {
         display: none;
@@ -66,7 +67,6 @@
 }
 
 .navbar {
-    @extend .container;
     @extend .bg-primary;
     @extend .pad-both-10;
 
