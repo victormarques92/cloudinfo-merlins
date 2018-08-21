@@ -1,3 +1,104 @@
 @import '../../scss/_deps';
 
-// CSS DO FOOTER
+.footer {
+    @extend .bg-gray-light;
+
+    .container {
+        @extend .pad-top-10;
+        @extend .pad-bottom-20;
+    }
+
+    .list-footer {
+        @extend .row;
+
+        .item-list-footer {
+            @extend .uppercase;
+            @extend .cl-danger;
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    .social-media {
+        @extend .row;
+        @extend .mg-top-30;
+
+        .item-social {
+            @extend .overflow-hidden;
+            @extend .mg-right-30;
+            position: relative;
+            display: block;
+            width: 30px;
+            height: 30px;
+
+            .img-social {
+                position: absolute;
+
+                &.facebook {
+                    left: 0;
+                }
+
+                &.twitter {
+                    left: -30px;
+                }
+
+                &.pinterest {
+                    left: -61px;
+                }
+
+                &.tumber {
+                    left: -92px;
+                }
+
+                &.gplus {
+                    left: -123px;
+                }
+            }
+        }
+    }
+
+    .box-newsletter {
+        @extend .bg-white;
+        @extend .pad-sides-20;
+        @extend .pad-all-25;
+        border-radius: 5px;
+
+        .title-newsletter {
+            @extend .mg-bottom-15;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .description-newsletter {
+            @extend .mg-bottom-15;
+        }
+
+        .email-newsletter {
+            @extend .col;
+            @extend .pad-all-10;
+            border: 1px solid map-get($colors, 'black');
+            border-radius: 5px;
+
+            &::-webkit-input-placeholder {
+                color: darken(map-get($colors, 'gray-light'), 20%);
+            }
+        }
+
+        .btn-newsletter {
+            @extend .pad-sides-15;
+            @extend .pad-both-10;
+            @extend .bg-danger;
+            @extend .cl-white;
+            @extend .uppercase;
+            @extend .mg-left-10;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .copyright {
+        color: lighten(map-get($colors, 'black'), 50%);
+    }
+}
