@@ -1,0 +1,26 @@
+@import '../../scss/_deps';
+
+@media (max-width: 768px) {
+    .footer {
+        .nav-footer {
+            display: none;
+        }
+
+        .container {
+            .row {
+                div:first-child {
+                    order: 1;
+                }
+            }
+        }
+
+        .social-media {
+            justify-content: center;
+        }
+
+        .copyright {
+            margin-top: 15px;
+            text-align: center;
+        }
+    }
+}
