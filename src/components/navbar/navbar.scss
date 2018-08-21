@@ -1,0 +1,186 @@
+@import '../../scss/_deps';
+
+.header-nav {
+    .container {
+        @extend .row;
+        @extend .halign-between;
+        @extend .valign-middle;
+        @extend .pad-top-30;
+        @extend .pad-bottom-40;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .box-search {
+        @extend .row;
+        @extend .valign-middle;
+        @extend .pad-both-10;
+        @extend .pad-sides-15;
+        border: 1px solid map-get($colors, 'black');
+        border-radius: 5px;
+
+        .btn-search {
+            @extend .mg-right-15;
+        }
+
+        .input-search {
+            width: calc(100% - 40px);
+
+            &::-webkit-input-placeholder {
+                color: darken(map-get($colors, 'gray-light'), 20%);
+            }
+        }
+    }
+
+    .information {
+        @extend .cl-danger;
+
+        .title-information {
+            font-family: 'Merriweather', serif;
+            font-weight: 100;
+            font-style: italic;
+            font-size: 20px;
+        }
+    }
+
+    .shop {
+        @extend .row;
+        @extend .valign-middle;
+
+        .img-shop {
+            @extend .mg-right-15;
+        }
+
+        .bag {
+            text-transform: uppercase;
+            color: darken(map-get($colors, 'gray-light'), 20%);
+
+            .qtd-bag {
+                @extend .cl-danger;
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.navbar {
+    @extend .bg-primary;
+    @extend .pad-both-10;
+
+    .container {
+        @extend .row;
+        @extend .valign-middle;
+        @extend .halign-between;
+    }
+
+    .list-menu {
+        @extend .row;
+
+        .item-list {
+            @extend .cl-white;
+            @extend .pad-sides-15;
+            @extend .pad-both-10;
+            display: block;
+            font-style: italic;
+            font-weight: 100;
+            font-family: 'Merriweather', serif;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                @extend .cl-white;
+            }
+        }
+
+        .clearance {
+            background: darken(map-get($colors, 'primary'), 10%);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 100;
+        }
+    }
+
+    .list-sign {
+        @extend .row;
+        @extend .valign-middle;
+        color: lighten(map-get($colors, 'primary'), 25%);
+
+        .item-list {
+            @extend .cl-white;
+            @extend .pad-sides-15;
+            @extend .pad-both-10;
+            display: block;
+            font-style: italic;
+            font-weight: 100;
+            font-family: 'Merriweather',
+            serif;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+                @extend .cl-white;
+            }
+        }
+    }
+}
+
+
+//=========================================================
+//                                                 Dropdown
+//=========================================================
+.dropdown {
+    position: relative;
+
+    &-toggle::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: .255em;
+        vertical-align: .255em;
+        content: '';
+        border-top: .3em solid;
+        border-right: .3em solid transparent;
+        border-bottom: 0;
+        border-left: .3em solid transparent;
+    }
+
+    &-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 10rem;
+        padding: .5rem 0;
+        margin: .125rem 0 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: .25rem;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    &-item {
+        display: block;
+        width: 100%;
+        padding: .25rem 1.5rem;
+        clear: both;
+        font-weight: 400;
+        color: #212529;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+    }
+}

@@ -1,0 +1,146 @@
+@import '../../scss/_deps';
+
+@media (max-width: 992px) {
+    .header-nav {
+        padding-left: 0;
+        padding-right: 0;
+
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .hidden {
+            display: block;
+        }
+
+        .menu-mobile {
+            position: fixed;
+            top: 40px;
+            display: flex;
+            flex-direction: column;
+            width: 40px;
+            height: 25px;
+            cursor: pointer;
+
+            .burger {
+                background: map-get($colors, 'primary');
+                display: block;
+                width: 100%;
+                height: 5px;
+                margin-bottom: 5px;
+                border-radius: 50px;
+                transition: .25s;
+                opacity: 1;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &.active {
+                .burger:nth-child(1) {
+                    margin: 0;
+                    margin-top: 10px;
+                    transform: rotate(-40deg);
+                }
+
+                .burger:nth-child(2) {
+                    margin: 0 auto;
+                    width: 0;
+                    opacity: 0;
+                }
+
+                .burger:nth-child(3) {
+                    margin: 0;
+                    margin-top: -10px;
+                    transform: rotate(40deg);
+                }
+            }
+        }
+
+        .search {
+            display: none;
+        }
+
+        .shop {
+            flex-direction: column;
+            text-align: center;
+
+            .img-shop {
+                margin: 0;
+            }
+        }
+
+        .information {
+            display: flex;
+            order: 1;
+            width: 100%;
+            background: map-get($colors, 'gray-light');
+            justify-content: center;
+            align-items: center;
+            color: map-get($colors, 'black');
+            padding: 5px;
+            margin-top: 5px;
+
+            .title-information {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .navbar {
+        padding: 0;
+        position: absolute;
+        top: 98px;
+        left: -160%;
+        transition: .25s;
+
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .list-menu {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .dropdown {
+                padding: 5px 20px;
+                border-top: 1px solid darken(map-get($colors, 'gray-light'), 45%);
+
+                &:last-child,
+                &:first-child {
+                    border: 0;
+                }
+
+                &-menu {
+                    display: none;
+                }
+
+                &-toggle::after {
+                    opacity: 0;
+                }
+            }
+
+            .clearance {
+                height: 51px;
+                padding: 0 35px;
+                border-radius: 0;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .list-sign {
+            padding: 20px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        &.active {
+            left: 0;
+        }
+    }
+}

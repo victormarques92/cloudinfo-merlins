@@ -12,6 +12,9 @@ rules:
     no-url-domains: 0
     no-url-protocols: 0
     clean-import-paths: 0
+    placeholder-in-extend: 0
+    no-vendor-prefixes: 0
+    no-important: 0
     indentation:
     - 1
     - size: 4

@@ -1,5 +1,10 @@
+@-ms-viewport {
+    width: device-width;
+}
+
 html {
     box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
 }
 
 *,
@@ -10,8 +15,10 @@ html {
 
 .container {
     width: 100%;
-    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
     margin-right: auto;
+    margin-left: auto;
 }
 
 @media (min-width: 576px) {
@@ -43,6 +50,11 @@ html {
     flex-wrap: wrap;
 }
 
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.col,
 .col-1,
 .col-2,
 .col-3,
@@ -55,7 +67,6 @@ html {
 .col-10,
 .col-11,
 .col-12,
-.col,
 .col-sm-1,
 .col-sm-2,
 .col-sm-3,
@@ -68,7 +79,6 @@ html {
 .col-sm-10,
 .col-sm-11,
 .col-sm-12,
-.col-sm,
 .col-md-1,
 .col-md-2,
 .col-md-3,
@@ -81,7 +91,6 @@ html {
 .col-md-10,
 .col-md-11,
 .col-md-12,
-.col-md,
 .col-lg-1,
 .col-lg-2,
 .col-lg-3,
@@ -94,7 +103,6 @@ html {
 .col-lg-10,
 .col-lg-11,
 .col-lg-12,
-.col-lg,
 .col-xl-1,
 .col-xl-2,
 .col-xl-3,
@@ -106,13 +114,11 @@ html {
 .col-xl-9,
 .col-xl-10,
 .col-xl-11,
-.col-xl-12,
-.col-xl {
+.col-xl-12 {
     position: relative;
     width: 100%;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0 15px;
 }
 
 .col {
@@ -182,12 +188,6 @@ html {
 }
 
 @media (min-width: 576px) {
-    .col-sm {
-        flex-basis: 0;
-        flex-grow: 1;
-        max-width: 100%;
-    }
-
     .col-sm-1 {
         flex: 0 0 8.333333%;
         max-width: 8.333333%;
@@ -250,12 +250,6 @@ html {
 }
 
 @media (min-width: 768px) {
-    .col-md {
-        flex-basis: 0;
-        flex-grow: 1;
-        max-width: 100%;
-    }
-
     .col-md-1 {
         flex: 0 0 8.333333%;
         max-width: 8.333333%;
@@ -318,12 +312,6 @@ html {
 }
 
 @media (min-width: 992px) {
-    .col-lg {
-        flex-basis: 0;
-        flex-grow: 1;
-        max-width: 100%;
-    }
-
     .col-lg-1 {
         flex: 0 0 8.333333%;
         max-width: 8.333333%;
@@ -386,12 +374,6 @@ html {
 }
 
 @media (min-width: 1200px) {
-    .col-xl {
-        flex-basis: 0;
-        flex-grow: 1;
-        max-width: 100%;
-    }
-
     .col-xl-1 {
         flex: 0 0 8.333333%;
         max-width: 8.333333%;
