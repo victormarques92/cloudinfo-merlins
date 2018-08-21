@@ -109,6 +109,11 @@ gulp.task('js', function() {
         .pipe(gulp.dest( paths.dest.js ))
 })
 
+gulp.task('jsPlugins', function() {
+    return gulp.src( paths.src.js.plugins )
+        .pipe(gulp.dest( paths.dest.plugins ))
+})
+
 //===============================================
 //                                         Images
 //===============================================
@@ -136,6 +141,7 @@ gulp.task('fonts', function() {
 gulp.task('watch', function() {
     gulp.watch(paths.src.img, function() { runSequence('image', 'browsersync:reload'); })
     gulp.watch(paths.src.js.files, function() { runSequence('js', 'browsersync:reload'); })
+    gulp.watch(paths.src.js.plugins, function() { runSequence('jsPlugins', 'browsersync:reload'); })
     gulp.watch(paths.src.fonts, function() { runSequence('fonts', 'browsersync:reload'); })
     gulp.watch(paths.src.css.all, function() { runSequence('sass-lint', 'css', 'browsersync:reload'); })
     gulp.watch(paths.src.views.files, function() { runSequence('html', 'browsersync:reload'); })
@@ -146,5 +152,5 @@ gulp.task('watch', function() {
 //                                  Tasks Default
 //===============================================
 gulp.task('default', function(callback) {
-    runSequence('html', 'sass-lint', 'css', 'js', 'image', 'fonts', 'watch', 'sync');
+    runSequence('html', 'sass-lint', 'css', 'js', 'jsPlugins', 'image', 'fonts', 'watch', 'sync');
 });

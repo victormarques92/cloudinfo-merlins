@@ -1,0 +1,89 @@
+@import '../../scss/_deps';
+
+.potions {
+    @extend .pad-top-50;
+    @extend .pad-bottom-100;
+
+    .title-potions {
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+    }
+
+    .box-potions {
+        @extend .mg-top-50;
+        text-align: center;
+        cursor: pointer;
+
+        .product-name {
+            font-family: 'Merriweather', serif;
+            font-weight: 600;
+
+            .price {
+                @extend .cl-danger;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    z-index: 1;
+
+    &-content {
+        @extend .row;
+        @extend .valign-middle;
+        @extend .pad-both-50;
+        @extend .pad-sides-20;
+        @extend .bg-white;
+        position: relative;
+        left: calc(50% - 35%);
+        top: calc(50% - 40%);
+        width: 70%;
+        height: 80%;
+
+        .col-6:first-child {
+            @extend .row;
+            @extend .valign-middle;
+        }
+
+        .close {
+            @extend .pad-both-5;
+            @extend .pad-sides-10;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .title-modal,
+        .text-modal {
+            @extend .mg-bottom-20;
+            font-family: 'Merriweather', serif;
+
+        }
+
+        .price {
+            @extend .cl-danger;
+            margin-top: -20px;
+            font-weight: 600;
+        }
+
+        .btn-cart {
+            @extend .bg-danger;
+            @extend .pad-both-10;
+            @extend .pad-sides-15;
+            @extend .cl-white;
+            @extend .uppercase;
+            @extend .mg-top-10;
+            display: inline-block;
+            border-radius: 5px;
+        }
+    }
+}
